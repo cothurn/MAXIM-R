@@ -164,13 +164,26 @@ exppdf <- function(l=1,x=c(0.4,0.3,0.2,0.1)){
   }
 }
 
-
+#' Plot of Exponential Probability Density Function
+#' @param l >= 0 
+#' @param x a non negative row vector
+#' @return Plot of the pdf of exp(l) (y vs. x). 
+#' @examples
+#' exppdfplot(1,c(0.4,0.3,0.2,0.1))
+#' 
 exppdfplot <- function(l=1,x=c(0.4,0.3,0.2,0.1)){
   y = exppdf(l,x)
   plot(x,y)
   lines(x,y)
 }
-geometriccdf <- function(p,k){
+
+#' Geometric Cumulative Distribution Function
+#' @param p value between 0 and 1, inclusive
+#' @param k integer >= 1
+#' @return y(i) = P(X <= i),  i=1,2,...,k, where X  is a Geometric(p) rv.
+#' @examples
+#' geometriccdf(0.5,5)
+geometriccdf <- function(p=0.5,k=5){
   if(!(k>=1))
     print("error with k")
   else if(p > 1 || p < 0)
@@ -182,7 +195,14 @@ geometriccdf <- function(p,k){
     return(y)
   }
 }
-geometricpmf <- function(p,k){
+
+#' Geometric Probability Mass Function
+#' @param p value between 0 and 1, inclusive
+#' @param k integer >= 1
+#' @return y(i) = P(X = i),  i=1,...k, where X is a  Geometric(p) rv.
+#' @examples
+#' geometricpmf(0.5,5)
+geometricpmf <- function(p=0.5,k=5){
   if(!(k>=1))
     print("error with k")
   else if(p > 1 || p < 0)
@@ -195,7 +215,15 @@ geometricpmf <- function(p,k){
     return(y)
   }
 }
-negbincdf <- function(r,p,k){
+
+#' Negative Binomial Cumulative Distribution Function
+#' @param r integer >= 1
+#' @param p value between 0 and 1, inclusive
+#' @param k integer >= 1
+#' @return (i) = P(X <= i),  i=r,r+1,...,r+k, where X  is a Negative Binomial(r,p) rv.
+#' @examples
+#' negbincdf(1,0.5,1)
+negbincdf <- function(r=1,p=0.5,k=1){
   if(r < 1)
     print("Issue with r")
   else if(k < 1)
@@ -207,7 +235,16 @@ negbincdf <- function(r,p,k){
     return(y)
   }
 }
-negbinpmf <- function(r,p,k){
+
+#' Negative Binomial Probability Mass Function
+#' @param r integer >= 1
+#' @param p value between 0 and 1, inclusive
+#' @param k integer >= 1
+#' @return y(i) = P(X = i),  i=r,r+1,...,r+k, where X  is a  Negative Binomial(r,p) rv.
+#' @examples
+#' negbinpmf(1,0.5,1)
+
+negbinpmf <- function(r=1,p=0.5,k=1){
   if(r < 1)
     print("Issue with r")
   else if(k < 1)
@@ -219,7 +256,15 @@ negbinpmf <- function(r,p,k){
     return(y)
   }
 }
-normalcdf <- function(m,s,x){
+
+#' Normal Cumulative Distribution Function
+#' @param m mean of the distribution
+#' @param s variance, which should be bigger than 0
+#' @param x a row vector
+#' @return y(i) =  F(x(i)), where F is an Normal(m,s) cdf, with mean  m and variance s. 
+#' @examples
+#' normalcdf(1,1,c(1,2,3,4))
+normalcdf <- function(m=1,s=1,x=c(1,2,3,4)){
   if(s < 0)
     print("Issue with s")
   else{
@@ -230,12 +275,28 @@ normalcdf <- function(m,s,x){
     return(y)
   }
 }
-normalcdfplot <- function(m,s,x){
+
+#' Plot of Normal Cumulative Distribution Function
+#' @param m mean of the distribution
+#' @param s variance, which should be bigger than 0
+#' @param x a row vector
+#' @return Plot of the cdf of Normal(m,s) (y vs. x). 
+#' @examples
+#' normalcdfplot(1,1,c(1,2,3,4))
+normalcdfplot <- function(m=1,s=1,x=c(1,2,3,4)){
   y = normalcdf(m,s,x)
   plot(x,y)
   lines(x,y)
 }
-normalpmf <- function(m,s,x){
+
+#' Normal Probability Density Function
+#' @param m mean of the distribution
+#' @param s variance, which should be bigger than 0
+#' @param x a row vector
+#' @return y(i) =f(x(i)), where f is an Normal(m,s) pdf, with mean m and variance s.
+#' @examples
+#' normalpdf(1,1,c(1,2,3,4))
+normalpmf <- function(m=1,s=1,x=c(1,2,3,4)){
   if(s < 0)
     print("Issue with s")
   else{
@@ -246,11 +307,26 @@ normalpmf <- function(m,s,x){
     return(y)
   }
 }
-normalpmfplot <- function(m,s,x){
+
+#' Plot of Normal Probability Density Function
+#' @param m mean of the distribution
+#' @param s variance, which should be bigger than 0
+#' @param x a row vector
+#' @return Plot of the pdf of Normal(m,s) (y vs. x). 
+#' @examples
+#' normalpdfplot(1,1,c(1,2,3,4))
+normalpmfplot <- function(m=1,s=1,x=c(1,2,3,4)){
   y = normalpmf(m,s,x)
   plot(x,y)
   lines(x,y)
 }
+
+#' Poisson Cumulative Distribution Function
+#' @param l value of the poisson parameter
+#' @param k maximum value of X
+#' @return y(i) = P(X <= i-1),  i=1,2,...,k+1, where X is a  Poisson(l) rv.
+#' @examples
+#' poissoncdf(1,5)
 poissoncdf <- function(l,k){
   if(l < 0 || l > 700)
     print("Issue with l")
@@ -262,6 +338,13 @@ poissoncdf <- function(l,k){
     return(y)
   }
 }
+
+#' Poisson Probability Mass Function
+#' @param l value of the poisson parameter
+#' @param k maximum value of X
+#' @return y(i) = P(X = i-1),  i=1,...k+1, where X  is a Poisson(l) rv.
+#' @examples
+#' poissonpmf(1,5)
 poissonpmf <- function(l,k){
   if(l < 0 || l > 700)
     print("Issue with l")

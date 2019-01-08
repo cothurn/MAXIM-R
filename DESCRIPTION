@@ -1,11 +1,11 @@
 Package: MAXIM
 Type: Package
-Title: What the Package Does (Title Case)
+Title: MAXIM in R
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: V. G. Kulkarni/TJ Guo
+Maintainer: TJ Guo <tjguo97@live.unc.edu>
+Description: MAXIM-R is a collection of R programs intended to be used with the book 
+    Modeling, Analysis, Design and Control of Stochastic Systems by V G Kulkarni. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
