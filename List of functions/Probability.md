@@ -1,6 +1,6 @@
 
 ## Probability
-MAXIM can compute the distributions of discrete and continuous random variables as described below.
+MAXIM can compute the distributions of discrete and continuous random variables as described below. Use Ctrl-F to find the function you want quickly.
 ### Binomial Cumulative Distribution Function
 Usage: y=bincdf(n,p)
 
