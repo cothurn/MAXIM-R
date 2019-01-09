@@ -11,7 +11,7 @@ erlangpdfplot(k = 1, l = 1, x = c(0.4, 0.3, 0.2, 0.1))
 
 \item{l}{>= 0}
 
-\item{x}{a non negative row vector}
+\item{x}{a row vector}
 }
 \value{
 Plot of the pdf of Eralng(k,l) (y vs. x).

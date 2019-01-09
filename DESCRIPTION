@@ -7,6 +7,7 @@ Maintainer: TJ Guo <tjguo97@live.unc.edu>
 Description: MAXIM-R is a collection of R programs intended to be used with the book 
     Modeling, Analysis, Design and Control of Stochastic Systems by V G Kulkarni. 
 License: What license is it under?
+Imports: expm, matrixcalc
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
