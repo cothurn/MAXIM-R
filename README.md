@@ -36,6 +36,6 @@ You can use variables as arguments of the function/store the result of a functio
 ```
 ## List of functions
 ### [probability](https://github.com/cothurn/MAXIM-R/blob/master/List%20of%20functions/Probability.md)
-### [DTMC]() WIP
+### [DTMC](https://github.com/cothurn/MAXIM-R/blob/master/List%20of%20functions/DTMC.md)
 ### [CTMC]() WIP
 ### [General models and queuing models]() WIP
