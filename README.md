@@ -35,7 +35,7 @@ You can use variables as arguments of the function/store the result of a functio
 ?bincdf
 ```
 ## List of functions
-### (probability)[] WIP
-### (DTMC)[] WIP
-### (CTMC)[] WIP
-### (General models and queuing models)[] WIP
+### [probability](https://github.com/cothurn/MAXIM-R/blob/master/List%20of%20functions/Probability.md) WIP
+### [DTMC]() WIP
+### [CTMC]() WIP
+### [General models and queuing models]() WIP
