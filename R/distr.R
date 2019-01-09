@@ -81,7 +81,7 @@ erlangcdfplot <- function(k=1,l=1,x=c(0.4,0.3,0.2,0.1)){
 #' Eralng Probability Density Function
 #' @param k ingeter >= 1
 #' @param l >= 0
-#' @param x a non negative row vector
+#' @param x a row vector
 #' @return y(i) =f(x(i)), where f is an Erlang(k,l) pdf.
 #' @examples
 #' erlangpdf(1, 1, c(0.4,0.3,0.2,0.1))
@@ -104,7 +104,7 @@ erlangpdf <- function(k=1,l=1,x=c(0.4,0.3,0.2,0.1)){
 #' Plot of Erlang Probability Density Function
 #' @param k ingeter >= 1
 #' @param l >= 0
-#' @param x a non negative row vector
+#' @param x a row vector
 #' @return Plot of the pdf of Eralng(k,l) (y vs. x).
 #' @examples
 #' erlangpdfplot(1, 1, c(0.4,0.3,0.2,0.1))
